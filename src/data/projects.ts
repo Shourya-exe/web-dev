@@ -335,7 +335,7 @@ export const PROJECTS: Project[] = [
   {
     id: "10",
     slug: "estate-villa-murshidabad",
-    title: "RESIDENTIAL ESTATE VILLA & GARDENS",
+    title: "RESIDENTIAL VILLA",
     category: "Villas",
     categorySlug: "villas",
     tagline: "An understated private residence balancing classical proportions with verdant courtyard gardens.",
@@ -348,8 +348,7 @@ export const PROJECTS: Project[] = [
     gallery: [
       "/images/projects/estate-villa/cover.jpg",
       "/images/projects/estate-villa/view-1.jpg",
-      "/images/projects/estate-villa/view-2.jpg",
-      "/images/all-images/img-11.jpg"
+      "/images/projects/estate-villa/view-2.jpg"
     ],
     brief:
       "A custom two-story family villa set on a private agrarian estate, designed to celebrate indoor-outdoor connectivity and cross-breezes.",
