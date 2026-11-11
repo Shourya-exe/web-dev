@@ -107,7 +107,7 @@ export const PROJECTS: Project[] = [
     tagline: "Curvilinear aerodynamic architecture maximizing natural light, garden views, and spatial grandeur.",
     location: "Kolkata",
     year: "ON GOING",
-    area: "Approx. 12,40,000 sq.ft",
+    area: "Approx. 2,40,000 sq.ft",
     status: "ON GOING",
     workedFor: "Leading Real Estate Developers",
     coverImage: "/images/all-images/img-2.jpg",
