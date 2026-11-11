@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
     category: "Health Care",
     categorySlug: "healthcare",
     tagline: "A state-of-the-art academic medical campus planned for clinical excellence and healing environments.",
-    location: "Phulbani & Koraput, Odisha",
+    location: "Medical College, Odisha",
     year: "2023",
     area: "9,50,000 sq.ft",
     status: "Completed / Commissioned",

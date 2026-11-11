@@ -5,7 +5,7 @@ website_changes_and_verification_report.pdf
 .DS_Store
 node_modules/
 .next/
-data/
+/data/
 /public/images/all-images/*.webp
 !/public/images/all-images/img-4.webp
 /public/images/all-images/*.png
