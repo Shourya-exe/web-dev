@@ -23,8 +23,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.redefiningarchitecture.com"),
   title: {
-    default: "Redefining Design Studio | Multidisciplinary Design Studio",
-    template: "%s | Redefining Design Studio",
+    default: "Redefining Architecture | Multidisciplinary Architecture Studio",
+    template: "%s | Redefining Architecture",
   },
   description:
     "Buildings shaped by climate, city, and the people who use them. High-end luxury residences, healthcare complexes, master planning, and sustainable architecture across Kolkata and Bhubaneswar.",
@@ -36,15 +36,15 @@ export const metadata: Metadata = {
     "IGBC Green Buildings",
     "Building Sanction KMC BDA",
     "Master Planning",
-    "Redefining Design Studio",
+    "Redefining Architecture",
   ],
-  authors: [{ name: "Redefining Design Studio" }],
+  authors: [{ name: "Redefining Architecture" }],
   openGraph: {
-    title: "Redefining Design Studio | Multidisciplinary Design Studio",
+    title: "Redefining Architecture | Multidisciplinary Architecture Studio",
     description:
       "Buildings shaped by climate, city, and the people who use them. High-end luxury residences, healthcare complexes, master planning, and sustainable architecture across Kolkata and Bhubaneswar.",
     url: "https://www.redefiningarchitecture.com",
-    siteName: "Redefining Design Studio",
+    siteName: "Redefining Architecture",
     locale: "en_IN",
     type: "website",
   },

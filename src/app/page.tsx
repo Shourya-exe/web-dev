@@ -11,7 +11,7 @@ import { ArrowUpRight, Download } from "lucide-react";
 import { PROJECTS } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Redefining Design Studio | Multidisciplinary Design Studio",
+  title: "Redefining Architecture | Multidisciplinary Architecture Studio",
   description:
     "Multidisciplinary architecture and master planning studio based in Kolkata and Bhubaneswar. Over 20 years of expertise across luxury residences, healthcare complexes, and sustainable architecture.",
 };
@@ -56,7 +56,7 @@ export default function HomePage() {
                 href="/redefine-design-studio-portfolio.pdf"
                 download="Redefine_Design_Studio_Portfolio.pdf"
                 className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] px-4 py-2.5 border border-[#9E7D2D] bg-[#9E7D2D]/5 hover:bg-[#9E7D2D] text-[#9E7D2D] hover:text-white transition-all shadow-sm"
-                aria-label="Download Redefine Design Studio Portfolio PDF"
+                aria-label="Download Redefining Architecture Portfolio PDF"
               >
                 <Download className="w-3.5 h-3.5" />
                 Download Portfolio

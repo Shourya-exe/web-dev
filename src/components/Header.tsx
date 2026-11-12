@@ -69,12 +69,12 @@ export default function Header() {
           <Link
             href="/"
             className="flex items-center gap-3.5 group focus:outline-none"
-            aria-label="Redefining Design Studio Home"
+            aria-label="Redefining Architecture Home"
           >
             <div className="relative w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/images/logo.png"
-                alt="Redefining Design Studio Logo"
+                alt="Redefining Architecture Logo"
                 width={40}
                 height={40}
                 priority
@@ -86,7 +86,7 @@ export default function Header() {
                 Redefining
               </span>
               <span className="text-[10px] font-light uppercase tracking-[0.3em] text-[#757066]">
-                  Design Studio
+                Architecture
               </span>
             </div>
           </Link>

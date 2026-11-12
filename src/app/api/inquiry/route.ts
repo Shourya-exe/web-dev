@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
 
     const textContent = `
 ========================================
-NEW PROJECT INQUIRY — REDEFINING DESIGN STUDIO
+NEW PROJECT INQUIRY — REDEFINING ARCHITECTURE
 ========================================
 
 Reference ID: ${inquiryId}
@@ -82,7 +82,7 @@ To reply directly to the client, reply to this email or write to: ${email}
     <!-- Header -->
     <div style="border-bottom: 1px solid #262420; padding-bottom: 20px; margin-bottom: 24px;">
       <div style="font-size: 10px; font-family: monospace; letter-spacing: 0.25em; text-transform: uppercase; color: #C5A85C; margin-bottom: 8px;">
-        Redefining Design Studio · Client Inquiry
+        Redefining Architecture · Client Inquiry
       </div>
       <h1 style="font-size: 22px; font-weight: normal; margin: 0; color: #F7F5F0;">
         New Project Consultation Request
@@ -128,7 +128,7 @@ To reply directly to the client, reply to this email or write to: ${email}
 
     <!-- Action Button -->
     <div style="text-align: center; padding-top: 12px; border-top: 1px solid #262420;">
-      <a href="mailto:${email}?subject=${encodeURIComponent("Re: Inquiry regarding " + (projectType || "Architecture project") + " — Redefining Design Studio")}" 
+      <a href="mailto:${email}?subject=${encodeURIComponent("Re: Inquiry regarding " + (projectType || "Architecture project") + " — Redefining Architecture")}" 
          style="display: inline-block; background-color: #C5A85C; color: #0D0C0B; padding: 12px 24px; font-size: 11px; font-family: monospace; font-weight: bold; text-decoration: none; text-transform: uppercase; letter-spacing: 0.15em;">
         Reply to Client Directly
       </a>
@@ -189,7 +189,7 @@ To reply directly to the client, reply to this email or write to: ${email}
     const resendApiKey = process.env.RESEND_API_KEY;
     if (!emailSent && resendApiKey) {
       try {
-        const fromAddress = process.env.EMAIL_FROM || "Redefining Design Studio <onboarding@resend.dev>";
+        const fromAddress = process.env.EMAIL_FROM || "Redefining Architecture <onboarding@resend.dev>";
         const resendRes = await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
@@ -228,7 +228,7 @@ To reply directly to the client, reply to this email or write to: ${email}
       try {
         const port = Number(process.env.SMTP_PORT) || 465;
         const secure = process.env.SMTP_SECURE === "true" || port === 465;
-        const from = process.env.SMTP_FROM || `"Redefining Design Studio" <${smtpUser}>`;
+        const from = process.env.SMTP_FROM || `"Redefining Architecture" <${smtpUser}>`;
 
         const transporter = nodemailer.createTransport({
           host: smtpHost,

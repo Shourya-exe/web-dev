@@ -42,7 +42,7 @@ export default function StudioIntro() {
           {/* Left Column: Narrative & Values */}
           <div className="lg:col-span-6 space-y-6 text-[#3D3933] text-base md:text-lg leading-relaxed font-light">
             <p>
-              Redefining Design Studio, a multidisciplinary practice operating from Kolkata and Bhubaneswar, has a vision to evolve the new-age value system in Indian built environments.
+              Redefining Architecture, a multidisciplinary practice operating from Kolkata and Bhubaneswar, has a vision to evolve the new-age value system in Indian built environments.
             </p>
 
             <p>

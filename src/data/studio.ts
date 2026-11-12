@@ -37,8 +37,8 @@ export interface NewsArticle {
 }
 
 export const STUDIO_DATA = {
-  name: "Redefining Design Studio",
-  shortName: "RDS",
+  name: "Redefining Architecture",
+  shortName: "RA",
   tagline: "Buildings shaped by climate, city, and the people who use them.",
   subtagline: "Architecture, interiors, landscape, vaastu, and green-building consultancy with statutory sanction approvals across Eastern India.",
   transparencyNote: "Projects shown were executed while working for real estate developers and premier design consultancies.",
@@ -65,7 +65,7 @@ export const STUDIO_DATA = {
       email: "bhubaneswar@redefiningarchitecture.com",
     },
   ],
-  generalEmail: "info@redefinedesignstudio.in",
+  generalEmail: "info@redefiningarchitecture.com",
   phone: "+91 98364 21375",
   socials: [
     { name: "Instagram", href: "https://www.instagram.com/redefinedesignstudio15/" },
