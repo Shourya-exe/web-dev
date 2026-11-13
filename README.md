@@ -46,7 +46,7 @@ npm run lint
   - `/design` — Design philosophy & methodologies
   - `/life-at-studio` — Studio culture & craftsmanship
   - `/news` — Updates, press, and publications
-  - `/contact` — Comprehensive inquiry form with automated email dispatch to `info@redefinedesignstudio.in`
+  - `/contact` — Comprehensive inquiry form with automated email dispatch to `redefiningarchitecture@gmail.com`
   - `/api/inquiry` — Serverless inquiry submission route with email delivery (SMTP / Resend) and local persistent backup
 
 - **Email Inquiry Routing**:

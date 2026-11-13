@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Play, Pause } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { INDIA_PILLARS } from "@/data/studio";
 
 export default function DialogueIndia() {
@@ -62,15 +62,6 @@ export default function DialogueIndia() {
           </div>
 
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => setIsAutoCycle(!isAutoCycle)}
-              className="px-3.5 py-2 border border-[#D4CEBF] bg-[#FFFFFF] text-[10px] font-mono uppercase tracking-widest text-[#141311] hover:text-[#9E7D2D] hover:border-[#9E7D2D] transition-colors flex items-center gap-2 shadow-sm"
-              aria-label="Toggle auto theme cycle"
-            >
-              {isAutoCycle ? <Pause className="w-3 h-3 text-[#9E7D2D]" /> : <Play className="w-3 h-3 text-[#9E7D2D]" />}
-              <span>{isAutoCycle ? "Auto Theme: ON" : "Auto Theme: OFF"}</span>
-            </button>
-
             <Link
               href="/dialogue-with-india"
               className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9E7D2D] hover:text-[#141311] transition-colors"

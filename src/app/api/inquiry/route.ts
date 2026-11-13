@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import nodemailer from "nodemailer";
 
-const DEFAULT_RECIPIENT = "info@redefinedesignstudio.in";
+const DEFAULT_RECIPIENT = "redefiningarchitecture@gmail.com";
 const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzsk9Xgfyl1A9umOnxJib6HM-JVvSxlR583vxM27TtwWbAHEnWIGf1HHb0Jq4cf8iWA/exec";
 
 function toFormBody(values: Record<string, string>) {
@@ -213,6 +213,34 @@ To reply directly to the client, reply to this email or write to: ${email}
         } else {
           const errData = await resendRes.text();
           console.error("[Inquiry] Resend API error:", errData);
+
+          // Fallback: If using Resend sandbox (onboarding@resend.dev), Resend restricts delivery to the account email
+          const match = errData.match(/your own email address \(([^)]+)\)/);
+          if (match && match[1]) {
+            const fallbackEmail = match[1];
+            console.log(`[Inquiry] Retrying Resend delivery with verified account email: ${fallbackEmail}`);
+            const retryRes = await fetch("https://api.resend.com/emails", {
+              method: "POST",
+              headers: {
+                Authorization: `Bearer ${resendApiKey}`,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                from: fromAddress,
+                to: [fallbackEmail],
+                reply_to: email,
+                subject: `[FORWARDED TO ${recipientEmail}] ${subject}`,
+                text: `[Target recipient: ${recipientEmail}]\n\n` + textContent,
+                html: `<div style="background:#FFF3CD;color:#856404;padding:12px;margin-bottom:16px;font-size:12px;border:1px solid #FFEBAA;"><strong>Notice:</strong> Delivered to your Resend account email (<strong>${fallbackEmail}</strong>) because Resend testing domain (<code>onboarding@resend.dev</code>) only permits sending to the account owner. To send directly to <code>${recipientEmail}</code>, verify your custom domain at <a href="https://resend.com/domains">resend.com/domains</a>.</div>` + htmlContent,
+              }),
+            });
+
+            if (retryRes.ok) {
+              emailSent = true;
+              emailServiceUsed = `Resend API (Testing to ${fallbackEmail})`;
+              console.log(`[Inquiry] Successfully delivered fallback email to ${fallbackEmail}`);
+            }
+          }
         }
       } catch (resendErr) {
         console.error("[Inquiry] Resend dispatch error:", resendErr);

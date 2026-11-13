@@ -1,6 +1,6 @@
-# Email Inquiry Setup Guide — info@redefinedesignstudio.in
+# Email Inquiry Setup Guide — redefiningarchitecture@gmail.com
 
-This project is configured to automatically route all customer inquiry form submissions directly to **`info@redefinedesignstudio.in`**.
+This project is configured to automatically route all customer inquiry form submissions directly to **`redefiningarchitecture@gmail.com`**.
 
 When a customer submits an inquiry, an email is dispatched containing:
 - **Client Full Name**
@@ -27,7 +27,7 @@ If you use a Gmail or Google Workspace account to send:
 4. Copy the 16-character generated password.
 5. In your `.env` (or in Vercel Environment Variables):
 ```env
-CONTACT_RECEIVER_EMAIL="info@redefinedesignstudio.in"
+CONTACT_RECEIVER_EMAIL="redefiningarchitecture@gmail.com"
 SMTP_HOST="smtp.gmail.com"
 SMTP_PORT=465
 SMTP_SECURE=true
@@ -40,16 +40,16 @@ SMTP_FROM="Redefining Architecture <your-gmail-or-workspace-account@gmail.com>"
 
 ### Method 2: Domain SMTP (Zoho Mail, Titan, cPanel, Hostinger)
 
-If `info@redefinedesignstudio.in` is hosted on Zoho or another business email provider:
+If `redefiningarchitecture@gmail.com` is hosted on Zoho or another business email provider:
 
 ```env
-CONTACT_RECEIVER_EMAIL="info@redefinedesignstudio.in"
+CONTACT_RECEIVER_EMAIL="redefiningarchitecture@gmail.com"
 SMTP_HOST="smtp.zoho.in"          # or your provider's SMTP host
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER="info@redefinedesignstudio.in"
+SMTP_USER="redefiningarchitecture@gmail.com"
 SMTP_PASS="your-email-password-or-app-password"
-SMTP_FROM="Redefining Architecture <info@redefinedesignstudio.in>"
+SMTP_FROM="Redefining Architecture <redefiningarchitecture@gmail.com>"
 ```
 
 ---
@@ -60,11 +60,11 @@ SMTP_FROM="Redefining Architecture <info@redefinedesignstudio.in>"
 2. Generate an API Key under **API Keys**.
 3. Add the following to your environment variables:
 ```env
-CONTACT_RECEIVER_EMAIL="info@redefinedesignstudio.in"
+CONTACT_RECEIVER_EMAIL="redefiningarchitecture@gmail.com"
 RESEND_API_KEY="re_123456789..."
 EMAIL_FROM="Redefining Architecture <onboarding@resend.dev>"
 ```
-*(Once you verify your domain `redefinedesignstudio.in` in Resend, you can change `EMAIL_FROM` to `Redefining Architecture <inquiries@redefinedesignstudio.in>`)*.
+*(Once you verify your domain `redefiningarchitecture.com` in Resend, you can change `EMAIL_FROM` to `Redefining Architecture <inquiries@redefiningarchitecture.com>`)*.
 
 ---
 
